@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Procesador de Pagos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="light-theme">
+    <h1>💳 Sistema de Pago</h1>
+
+    <label>Tipo de pago:</label>
+    <select id="paymentType">
+      <option value="CREDIT">Crédito</option>
+      <option value="DEBIT">Débito</option>
+      <option value="PAYPAL">PayPal</option>
+    </select>
+
+    <label>Monto:</label>
+    <input type="number" id="amount" placeholder="Ingresa el monto" />
+
+    <label>Canal de notificación:</label>
+    <select id="channel">
+      <option value="EMAIL">Correo</option>
+      <option value="SMS">SMS</option>
+    </select>
+
+    <label>Tema visual:</label>
+    <select id="themeSelector">
+      <option value="light">Claro</option>
+      <option value="dark">Oscuro</option>
+    </select>
+
+    <button onclick="procesarPago()">Procesar Pago</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="themeFactory.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
